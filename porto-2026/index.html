@@ -6,8 +6,19 @@
 
 <link href="css/styles3.css" rel="stylesheet">
 <link href="css/styles2.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  #map { height: 520px; width: 100%; border-radius: 12px; z-index: 1; }
+  .mk { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+  .mk-ring { font-size:22px; line-height:1; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+  .mk-label { font-family:'Cormorant Garamond',serif; font-size:11px; font-weight:600; background:rgba(255,255,255,0.92); padding:2px 6px; border-radius:4px; white-space:nowrap; margin-top:2px; box-shadow:0 1px 4px rgba(0,0,0,0.15); }
+  .leaflet-popup-content-wrapper { border-radius:10px; font-family:'Cormorant Garamond',serif; }
+  .leaflet-popup-content { font-size:14px; line-height:1.5; }
+  .leaflet-popup-content strong { display:block; font-size:16px; margin-bottom:2px; }
+</style>
 </head>
 <body>
 
@@ -138,7 +149,7 @@
         <span><span class="dot aveiro"></span>Aveiro</span>
       </div>
     </div>
-    <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-4px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="images/191_2x_35.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, 10px, 0px); opacity: 1;"><img alt="" src="images/191_2x_34.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, 10px, 0px); opacity: 1;"><img alt="" src="images/192_2x_33.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, 266px, 0px); opacity: 1;"><img alt="" src="images/192_2x_32.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, 266px, 0px); opacity: 1;"><img alt="" src="images/190_2x_31.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, -246px, 0px); opacity: 1;"><img alt="" src="images/190_2x_30.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, -246px, 0px); opacity: 1;"><img alt="" src="images/191_2x_29.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, 10px, 0px); opacity: 1;"><img alt="" src="images/191_2x_28.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, 10px, 0px); opacity: 1;"><img alt="" src="images/192_2x_27.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, 266px, 0px); opacity: 1;"><img alt="" src="images/192_2x_26.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, 266px, 0px); opacity: 1;"><img alt="" src="images/193_2x_25.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, 522px, 0px); opacity: 1;"><img alt="" src="images/193_2x_24.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, 522px, 0px); opacity: 1;"><img alt="" src="images/190_2x_23.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, -246px, 0px); opacity: 1;"><img alt="" src="images/190_2x_22.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, -246px, 0px); opacity: 1;"><img alt="" src="images/193_2x_21.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, 522px, 0px); opacity: 1;"><img alt="" src="images/193_2x_20.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, 522px, 0px); opacity: 1;"><img alt="" src="images/191_2x_19.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, 10px, 0px); opacity: 1;"><img alt="" src="images/191_2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, 10px, 0px); opacity: 1;"><img alt="" src="images/192_2x_17.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, 266px, 0px); opacity: 1;"><img alt="" src="images/192_2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, 266px, 0px); opacity: 1;"><img alt="" src="images/190_2x_15.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, -246px, 0px); opacity: 1;"><img alt="" src="images/190_2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, -246px, 0px); opacity: 1;"><img alt="" src="images/193_2x_13.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, 522px, 0px); opacity: 1;"><img alt="" src="images/193_2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, 522px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1606" height="672" viewBox="-130 -56 1606 672" style="transform: translate3d(-130px, -56px, 0px);"><g><path class="leaflet-interactive" stroke="#7fb3d5" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" fill="none" d="M561 185L559 192"></path><path class="leaflet-interactive" stroke="#a3d9a5" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" fill="none" d="M560 186L951 165"></path><path class="leaflet-interactive" stroke="#e8a87c" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" fill="none" d="M561 185L531 169L535 183"></path><path class="leaflet-interactive" stroke="#c9a0dc" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" fill="none" d="M560 186L544 429L526 445"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(561px, 185px, 0px); z-index: 185;"><div class="mk base"><div class="mk-ring">🏨</div><div class="mk-label">Torel Saboaria</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(559px, 188px, 0px); z-index: 188;"><div class="mk port"><div class="mk-ring">🌉</div><div class="mk-label">Ribeira</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(559px, 192px, 0px); z-index: 192;"><div class="mk port"><div class="mk-ring">🍷</div><div class="mk-label">Vila Nova de Gaia</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(560px, 186px, 0px); z-index: 186;"><div class="mk port"><div class="mk-ring">🚂</div><div class="mk-label">São Bento Station</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(951px, 165px, 0px); z-index: 165;"><div class="mk douro"><div class="mk-ring">🍇</div><div class="mk-label">Pinhão · Douro</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(531px, 169px, 0px); z-index: 169;"><div class="mk coast"><div class="mk-ring">🌊</div><div class="mk-label">Matosinhos Beach</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(535px, 183px, 0px); z-index: 183;"><div class="mk coast"><div class="mk-ring">🌅</div><div class="mk-label">Foz do Douro</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(544px, 429px, 0px); z-index: 429;"><div class="mk aveiro"><div class="mk-ring">🚣</div><div class="mk-label">Aveiro</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(526px, 445px, 0px); z-index: 445;"><div class="mk aveiro"><div class="mk-ring">🏠</div><div class="mk-label">Costa Nova</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(560px, 186px, 0px); z-index: 186;"><div class="mk port"><div class="mk-ring">📚</div><div class="mk-label">Livraria Lello</div></div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(561px, 184px, 0px); z-index: 184;"><div class="mk port"><div class="mk-ring">🛍️</div><div class="mk-label">Mercado do Bolhão</div></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(62514px, 49166px, 0px) scale(256);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///C:/Users/kgkaintatzis/OneDrive%20-%20EHL%20Hospitality%20Business%20School%20SA/Desktop/Portugal.html.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="file:///C:/Users/kgkaintatzis/OneDrive%20-%20EHL%20Hospitality%20Business%20School%20SA/Desktop/Portugal.html.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OSM</a> · © <a href="https://carto.com/attributions">CARTO</a></div></div></div></div>
+    <div id="map"></div>
   </div>
 </section>
 
@@ -169,7 +180,7 @@
           <img src="images/1636480b5-3ce0-4eda-a084-1901276700f1.png" alt="Torel Saboaria">
           <div class="day-caption"><div class="cap-eyebrow">Check-in</div><h4 class="display">A palace, waiting.</h4></div>
         </div>
-        <p class="day-desc">LX2064 touches down at 17:35. A private transfer delivers you to <b>Torel Saboaria</b> in fifteen minutes. Settle into your suite.As evening settles, a slow walk through the gardens, a welcome glass on the terrace, and a light first dinner at <b>Torel 1884</b> — the Michelin-starred table that will bookend your week.</p>
+        <p class="day-desc">LX2064 touches down at 17:35. A private transfer delivers you to <b>Torel Saboaria</b> in fifteen minutes. Settle into your suite. As evening settles, a slow walk through the gardens, a welcome glass on the terrace, and a light first dinner at <b>Torel 1884</b> — the Michelin-starred table that will bookend your week.</p>
         <div class="day-subgrid">
           <div class="day-sub"><img src="images/1dc882d0b-5f32-4107-85dc-0267aa1bcf93.png" alt="Suite"><div class="sub-label">Suite</div></div>
           <div class="day-sub"><img src="images/15e8dac57-653a-4ab7-9513-12750cb35eaa.png" alt="Torel 1884"><div class="sub-label">Torel 1884</div></div>
@@ -223,7 +234,7 @@
         <div class="day-loc">Porto → Pinhão → Porto</div>
         <div class="day-links">
           <a class="day-loc">São Bento station</a>
-          <a class="day-loc" "_blank"="">Pinhão</a>
+          <a class="day-loc">Pinhão</a>
           <a class="day-loc">UNESCO Douro Valley</a>
         </div>
       </div>
@@ -545,8 +556,51 @@
   <div class="closing">Até logo, Porto.</div>
 </footer>
 
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  var map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([41.15, -8.25], 9);
 
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
 
+  function mkIcon(emoji) {
+    return L.divIcon({
+      html: '<div class="mk"><div class="mk-ring">' + emoji + '</div></div>',
+      iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -18], className: ''
+    });
+  }
 
+  var places = [
+    { lat: 41.1496, lng: -8.6109, emoji: '🏨', name: 'Torel Saboaria', desc: 'Home base · A nineteenth-century palace, Michelin-starred dining.' },
+    { lat: 41.1408, lng: -8.6139, emoji: '🌉', name: 'Ribeira', desc: 'Day II · UNESCO-listed riverside quarter, rabelo boat cruises.' },
+    { lat: 41.1370, lng: -8.6100, emoji: '🍷', name: 'Vila Nova de Gaia', desc: 'Day II · Port wine cellars &amp; Dom Luís I Bridge.' },
+    { lat: 41.1459, lng: -8.6099, emoji: '🚂', name: 'São Bento Station', desc: 'Day III &amp; V · Departure point — 20,000 azulejo tiles.' },
+    { lat: 41.1851, lng: -7.9394, emoji: '🍇', name: 'Pinhão · Douro Valley', desc: 'Day III · UNESCO terraced vineyards, oldest wine region in the world.' },
+    { lat: 41.1837, lng: -8.6910, emoji: '🌊', name: 'Matosinhos Beach', desc: 'Day IV · Wide Atlantic beach, toddler-friendly, fresh seafood.' },
+    { lat: 41.1469, lng: -8.6760, emoji: '🌅', name: 'Foz do Douro', desc: 'Day IV · Where the Douro meets the Atlantic.' },
+    { lat: 40.6405, lng: -8.6538, emoji: '🚣', name: 'Aveiro', desc: 'Day V · Venice of Portugal — moliceiro boat rides on the canals.' },
+    { lat: 40.6188, lng: -8.7511, emoji: '🏠', name: 'Costa Nova', desc: 'Day V · Famous striped palheiros on the Atlantic coast.' },
+    { lat: 41.1467, lng: -8.6150, emoji: '📚', name: 'Livraria Lello', desc: 'Day VI · One of the world\'s most beautiful bookstores.' },
+    { lat: 41.1502, lng: -8.6090, emoji: '🛍️', name: 'Mercado do Bolhão', desc: 'Day VII · Beautifully restored historic market — ceramics, port, cheese.' }
+  ];
+
+  places.forEach(function(p) {
+    L.marker([p.lat, p.lng], { icon: mkIcon(p.emoji) })
+      .addTo(map)
+      .bindPopup('<strong>' + p.name + '</strong>' + p.desc);
+  });
+
+  // Dashed route lines
+  var dashStyle = { color: '#b09a6e', opacity: 0.5, weight: 1.5, dashArray: '4 6' };
+  L.polyline([[41.1496,-8.6109],[41.1408,-8.6139],[41.1370,-8.6100]], dashStyle).addTo(map);
+  L.polyline([[41.1496,-8.6109],[41.1459,-8.6099],[41.1851,-7.9394]], dashStyle).addTo(map);
+  L.polyline([[41.1496,-8.6109],[41.1837,-8.6910],[41.1469,-8.6760]], dashStyle).addTo(map);
+  L.polyline([[41.1496,-8.6109],[40.6405,-8.6538],[40.6188,-8.7511]], dashStyle).addTo(map);
+})();
+</script>
 
 </body></html>
